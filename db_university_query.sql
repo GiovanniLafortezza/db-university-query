@@ -28,3 +28,9 @@ where c.period = 'I semestre' and c.`year` = '1';
 -- Da quanti dipartimenti è composta l’università?
 select count(*) as total_departments
 from departments d ;
+
+
+-- Contare tutti gli insegnanti il cui cognome termina con la “E” (8)
+select *
+from teachers t 
+where t.surname like '%E';
