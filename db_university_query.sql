@@ -34,3 +34,9 @@ from departments d ;
 select *
 from teachers t 
 where t.surname like '%E';
+
+
+-- Selezionare nome, cognome e codice fiscale di tutti gli studenti iscritti al Corso di Laurea in Economia, in ordine alfabetico
+select s.name, s.surname, s.fiscal_code
+from students s 
+order by s.surname, s.name asc;
