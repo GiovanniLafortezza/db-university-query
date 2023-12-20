@@ -40,3 +40,10 @@ where t.surname like '%E';
 select s.name, s.surname, s.fiscal_code
 from students s 
 order by s.surname, s.name asc;
+
+
+-- Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
+select *
+from `degrees` d  
+join departments d2 on d.department_id = d2.id 
+where d.`level` = 'magistrale' and d2.name = 'Dipartimento di Neuroscienze';
