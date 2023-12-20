@@ -12,3 +12,8 @@ order by name asc;
 select *
 from courses c 
 where c.cfu >= 12;
+
+-- Selezionare tutti gli studenti nati nel 1990 (160)
+select *
+from students s 
+where year(date_of_birth) = '1990';
