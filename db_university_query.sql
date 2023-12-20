@@ -47,3 +47,12 @@ select *
 from `degrees` d  
 join departments d2 on d.department_id = d2.id 
 where d.`level` = 'magistrale' and d2.name = 'Dipartimento di Neuroscienze';
+
+
+-- Selezionare nome e cognome di tutti gli studenti che hanno superato l’esame del corso “maxime laboriosam nostrum” (39)
+select s.name as name_student, s.surname as surname_student, es.vote as vote_student, c.name as course_name
+from students s 
+join exam_student es on es.student_id = s.id 
+join exams e on e.id = es.exam_id 
+join courses c on c.id = e.course_id 
+where c.name = 'maxime laboriosam nostrum' and es.vote >= '18';
