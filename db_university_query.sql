@@ -56,3 +56,13 @@ join exam_student es on es.student_id = s.id
 join exams e on e.id = es.exam_id 
 join courses c on c.id = e.course_id 
 where c.name = 'maxime laboriosam nostrum' and es.vote >= '18';
+
+
+-- Elencare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
+select distinct  t.name as name_teacher, t.surname as surname_teacher
+from teachers t 
+join course_teacher ct on ct.teacher_id = t.id 
+join courses c on c.id = ct.course_id 
+join `degrees` d on d.id = c.degree_id 
+join departments d2 on d2.id = d.department_id  
+where d2.name = 'Dipartimento di Matematica';
