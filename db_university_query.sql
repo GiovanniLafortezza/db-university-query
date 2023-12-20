@@ -17,3 +17,9 @@ where c.cfu >= 12;
 select *
 from students s 
 where year(date_of_birth) = '1990';
+
+
+-- Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
+select *
+from courses c 
+where c.period = 'I semestre' and c.`year` = '1';
