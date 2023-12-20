@@ -23,3 +23,8 @@ where year(date_of_birth) = '1990';
 select *
 from courses c 
 where c.period = 'I semestre' and c.`year` = '1';
+
+
+-- Da quanti dipartimenti è composta l’università?
+select count(*) as total_departments
+from departments d ;
